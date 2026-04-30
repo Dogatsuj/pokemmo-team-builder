@@ -1,5 +1,7 @@
 const container = document.getElementById("pokemonContainer");
 
+const moves = movesData.map(move => move.name);
+
 function populateDropdown(dropdown) {
     pokemonData.forEach(poke => {
         const option = document.createElement("option");
@@ -59,7 +61,7 @@ function populateGenderDropdown(dropdown, pokemonId) {
 }
 
 function populateMoveDropdown(dropdown, pokemonId) {
-    const moves = pokemonData.find(poke => poke.id === pokemonId).moves || [];
+    //const moves = pokemonData.find(poke => poke.id === pokemonId).moves || [];
 
     dropdown.innerHTML = '<option value="Select a Move">Select a Move</option>'; // Clear previous moves
 
@@ -173,9 +175,9 @@ function updatePokemonImage(slot, selectedPokemonId) {
     }
 
     if (slot.querySelector('.shiny-checkbox').checked) {
-        pokemonImage.src = `./img/shiny/${selectedPokemonId}.png`;
+        pokemonImage.src = `img/shiny/${selectedPokemonId}.png`;
     } else {
-        pokemonImage.src = `./img/pokemon/${selectedPokemonId}.png`;
+        pokemonImage.src = `img/pokemon/${selectedPokemonId}.png`;
     }
 
 }

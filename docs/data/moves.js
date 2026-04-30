@@ -1,15 +1,5 @@
 const movesData = [
     {
-        "id": "000",
-        "name": "Select a Move",
-        "description": "Select a Move",
-        "type": "None",
-        "category": "Physical",
-        "power": 0,
-        "accuracy": 0,
-        "pp": 0
-    },
-    {
         "id": "001",
         "name": "Pound",
         "description": "The target is physically pounded with\na long tail, a foreleg, or the like.",
